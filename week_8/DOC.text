@@ -1,0 +1,2 @@
+1) Removed License coloumn because most of them are NA and we dont required this coloumn for further process.
+2) Removed id coloumn because we also have one coloumn(name of coloumn host_id) which already has information about the host id.
