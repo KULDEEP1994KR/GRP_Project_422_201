@@ -1,1 +1,5 @@
-1) Converted the TimeFrame coloumn in date stamp.  
+Provider: Tenancy Services, New Zealand.
+Dataset: Detailed quarterly rental bond report, 2020-2026
+Source: https://www.tenancy.govt.nz/about-tenancy-services/data-and-statistics/rental-bond-data/
+Raw file: data/raw/rental_bond_detailed_2020_2026.csv
+Code: scripts/Deliverable4_BondCleaning.py
