@@ -1,5 +1,24 @@
-Provider: Tenancy Services, New Zealand.
-Dataset: Detailed quarterly rental bond report, 2020-2026
+Rental bond data review 
+
+Rental Bond Dataset:
+The dataset used is the **Detailed Quarterly Tenancy Rental Bond Data (Q1 2020 - Q3 2026)**.
+
+Source:
+The rental bond dataset was obtained from Tenancy Services New Zealand. The data comes from the Tenancy Services tenancy bond database, which records rental bonds lodged with Tenancy Services. The dataset contains information about private-sector landlord bonds and is organised by tenancy start date. The source of the raw data is the Ministry of Business, Innovation and Employment.
+
 Source: https://www.tenancy.govt.nz/about-tenancy-services/data-and-statistics/rental-bond-data/
-Raw file: data/raw/rental_bond_detailed_2020_2026.csv
-Code: scripts/Deliverable4_BondCleaning.py
+
+Columns and Their Meanings:
+
+1. TimeFrame: The time period that the rental bond data relates to.
+2. Location Id: An identifier for the geographic location associated with the rental data.
+3. Dwelling Type: The type of rental dwelling or property.
+4. Number Of Beds: The number of bedrooms in the dwelling.
+5. Total Bonds: The total number of bonds recorded for the specified category.
+6. Active Bonds: The number of bonds that are active.
+7. Closed Bonds: The number of bonds that are closed.
+8. Median Rent: The median weekly rent for the specified group.
+9. Geometric Mean Rent: The geometric mean of weekly rents. Tenancy Services uses this as an alternative measure that closely approximates the median when rents follow a log-normal distribution.
+10. Upper Quartile Rent: The synthetic upper quartile rent, designed to estimate the 75th percentile of weekly rents.
+11. Lower Quartile Rent: The synthetic lower quartile rent, designed to estimate the 25th percentile of weekly rents.
+12. Log Std Dev Weekly Rent: The standard deviation of weekly rent values on the logarithmic scale, used in calculating the synthetic rent statistics.
