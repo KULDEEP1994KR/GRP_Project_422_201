@@ -6,3 +6,4 @@
    in price with same room_type and neighborhood group. Because after finding outlier with boxplot, the spread is very extream , so imputing with mean can skew the data so choose to
    impute with mdeian 
 6) Imputed minimum_nights height with median. its value is also going very extream, and only 37 row out 28765 is mising so choose to imoute with median.   
+7) Changed host_id coloumn in string becuase it was in float, and we do need the host_id in munerical because it the categorical coloumn.
