@@ -1,58 +1,27 @@
-Rental bond data review 
+# Rental Bond Dataset
 
-Rental Bond Dataset:
-The dataset used is the **Detailed Quarterly Tenancy Rental Bond Data (Q1 2020 - Q3 2026)**.
+Source: New Zealand Ministry of Business, Innovation & Employment (MBIE), Tenancy Services – Rental Bond Data.
 
-Source:
-The rental bond dataset was obtained from Tenancy Services New Zealand. The data comes from the Tenancy Services tenancy bond database, which records rental bonds lodged with Tenancy Services. The dataset contains information about private-sector landlord bonds and is organised by tenancy start date. The source of the raw data is the Ministry of Business, Innovation and Employment.
+Dataset: Detailed Quarterly Report (Q1 2020 – Q3 2026)
 
-Source: https://www.tenancy.govt.nz/about-tenancy-services/data-and-statistics/rental-bond-data/
-Raw file: data/raw/rental_bond_detailed_2020_2026.csv
-Code: scripts/Deliverable4_BondCleaning.py
+This dataset contains quarterly rental bond statistics for New Zealand, including the number of rental bonds and weekly rent measures for different locations, dwelling types, and bedroom categories.
 
+## Column Descriptions
 
-kirATA201-DATA422-Group-Project-
-DATA201 | DATA422 Group Project
-
-Team Members:
-kirtankumar patel
-Asia rawat
-kuldeepkumar 
-oli abbott. I'm a DATA422 student.
-Airbnb Listings Analysis:
-Data Source:
-The dataset used in this project is sourced from Inside Airbnb, an independent, non-commercial open-data initiative that provides data on Airbnb listings, availability, and guest reviews across major global cities.
-
-File Name:
-listings.csv
-
-Data Dictionary:
-Column Num	Column	Data Type	Description
-1	id	Integer/String	Unique identifier assigned by Airbnb for the listing.
-2	name	String	Public name or title of the listing as defined by the host.
-3	host_id	Integer	Unique identifier for the host user.
-4	host_name	String	First name (or display name) of the host.
-5	neighbourhood_group	String	Broader region, borough, or municipality group (may be blank/null for some areas).
-6	neighbourhood	String	Specific neighborhood, district, or local area of the listing.
-7	latitude	Float	World Geodetic System (WGS84) latitude coordinate of the listing.
-8	longitude	Float	World Geodetic System (WGS84) longitude coordinate of the listing.
-9	room_type	String	Categorization of the space offered (Entire home/apt, Private room, Shared room, or Hotel room).
-10	price	Numeric / Currency	Nightly rental price (in local currency).
-11	minimum_nights	Integer	Minimum required length of stay in nights.
-12	number_of_reviews	Integer	Total cumulative count of guest reviews received by the listing.
-13	last_review	Date (YYYY-MM-DD)	Date of the most recent guest review.
-14	reviews_per_month	Float	Average calculated number of reviews received per month over the listing's lifetime.
-15	calculated_host_listings_count	Integer	Total number of listings managed by the host in this region.
-16	availability_365	Integer	Total number of days the listing is available for booking within the next 365 days.
-17	number_of_reviews_ltm	Integer	Number of reviews received by the listing within the last 12 months.
-18	license	String	Local permit, registration, or business license number (if required/provided).
-Data Notes:
-Location Privacy:
-Latitude and longitude coordinates are masked by Airbnb for privacy, usually randomized within 0-150 meters of the actual property location.
-
-Missing Values:
-Columns like neighbourhood_group, last_review, reviews_per_month, and license may contain NaN/null values depending on listing activity and local regional requirements.
-
+| Column | Meaning |
+|--------|---------|
+| TimeFrame | The quarter and year the data represents (e.g., 2026-04-01 = Q2 2026). |
+| Location Id | Unique identifier for the geographic location. This should be kept for merging with other datasets. |
+| Dwelling Type | Type of rental dwelling (e.g., ALL, apartment, house). |
+| Number Of Beds | Number of bedrooms in the dwelling. |
+| Total Bonds | Total number of rental bonds lodged during the quarter. |
+| Active Bonds | Number of rental bonds that remained active during the quarter. |
+| Closed Bonds | Number of rental bonds closed during the quarter. |
+| Median Rent | Median weekly rent (NZD). |
+| Geometric Mean Rent | Geometric mean of weekly rents (NZD), which reduces the influence of extreme values. |
+| Upper Quartile Rent | 75th percentile of weekly rent. |
+| Lower Quartile Rent | 25th percentile of weekly rent. |
+| Log Std Dev Weekly Rent | Logarithmic standard deviation of weekly rent, indicating rent variability. |
 Data Cleaning Documentation Summary:
 Summary
 The objective of this data cleaning process was to prepare the Airbnb dataset for comparative analysis, focusing primarily on price metrics. The initial dataset contained 28,795 rows. Due to significant missing values in core target metrics—specifically the price field and peak summer season records—strict filtering was applied to preserve statistical validity. The final cleaned dataset contains 18,128 rows spanning from March to November, with zero-variance and entirely empty features completely removed to streamline downstream analysis.
