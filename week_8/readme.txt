@@ -12,7 +12,8 @@
 6) Imputed minimum_nights height with median. its value is also going very extream, and only 37 row out 28765 is mising so choose to imoute with median.   
 7) Changed host_id coloumn in string becuase it was in float, and we do need the host_id in munerical because it the categorical coloumn.
 8) filter the data and Clean the bond dataset
-
+9) Created a new area code column after extarcting the area code of repective logitude and latitudes.
+10) Created the time frame column from the puc_dat coloumn in quarterly format to match with bonf data set.
 
 
 
@@ -23,7 +24,7 @@ Source: New Zealand Ministry of Business, Innovation & Employment (MBIE), Tenanc
 
 Dataset: Detailed Quarterly Report (Q1 2020 – Q3 2026)
 
-This dataset contains quarterly rental bond statistics for New Zealand, including the number of rental bonds and weekly rent measures for different locations, dwelling types, and bedroom categories.
+This dataset conta ins quarterly rental bond statistics for New Zealand, including the number of rental bonds and weekly rent measures for different locations, dwelling types, and bedroom categories.
 
 ## Column Descriptions
 
@@ -93,3 +94,7 @@ Previous inspection found zero exact duplicate rows, negative bond counts, non-p
 
 Export and reproduction:
 Expected output: data/processed/rental_bond_cleaned_2025_10_to_2026_04.csv (26,991 rows x 12 columns, pending verification)...
+
+
+We are more focusing on price so changes the dwellling and number of beds coloumn to 'ALL' and saved in new data set 
+so is become easy to merge to data set.
