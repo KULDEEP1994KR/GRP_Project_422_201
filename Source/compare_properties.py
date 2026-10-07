@@ -143,3 +143,5 @@ plt.savefig(
 )
 
 plt.show()
+
+print(comparison[["Airbnb Properties", "Rental Properties"]].min())
