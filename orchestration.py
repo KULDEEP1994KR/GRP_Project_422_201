@@ -16,7 +16,7 @@ notebooks = [
     "Christ_data.ipynb",
     "tenancy.ipynb",
     "new_christ_bond.ipynb",
-    "compare_prop.ipynb"
+    #"compare_prop.ipynb"
 ]
 
 
