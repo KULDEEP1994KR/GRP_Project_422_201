@@ -17,7 +17,7 @@ notebooks = [
     "tenancy.ipynb",
     "new_christ_bond.ipynb",
     "Christ_bond_median.ipynb"
-    #"compare_prop.ipynb"
+    "compare_prop.ipynb"
 ]
 
 
